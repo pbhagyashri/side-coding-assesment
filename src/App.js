@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
+import './app.scss';
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
           <Navbar varient="light" bg="light" fixed="top" className="navbar">
             <Container>
               <Navbar.Brand>
-                <Link to={'/properties'}>Property Listings</Link>
+                <Link to={'/properties'} className="header-link">
+                  Property Listings
+                </Link>
               </Navbar.Brand>
             </Container>
           </Navbar>

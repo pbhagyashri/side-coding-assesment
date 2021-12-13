@@ -3,6 +3,7 @@ import './property-listing.scss';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Outlet } from 'react-router-dom';
 
 import PropertyCard from '../../components/PropertyCard';
 
@@ -25,6 +26,7 @@ const PropertyListing = () => {
 
   return (
     <Container className="property-listing-container">
+      <Outlet />
       <Row className="property-listing-container__row">
         {properties.map((property) => {
           return (
