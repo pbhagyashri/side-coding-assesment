@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-import heartFill from '../../assets/heart-fill.svg';
-import heartStroke from '../../assets/heart-stroke.svg';
+import heartFill from '../assets/heart-fill.svg';
+import heartStroke from '../assets/heart-stroke.svg';
 
 import {
   saveProperty,
   getFaoritedPropertiesFromStorage,
-} from '../../utils/helper';
+} from '../utils/helper';
 
 const FavoritePropertyIcon = ({ mlsId }) => {
   const [propertyFavorated, setPropertyFavorated] = useState(false);

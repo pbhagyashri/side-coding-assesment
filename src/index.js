@@ -2,16 +2,22 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './bootstrap';
+
 import App from './App';
+import NoRouteMatch from './routes/NoRouteMatch';
 import reportWebVitals from './reportWebVitals';
 import PropertyListing from './routes/property-listing/PropertyListing';
+import PropertyDetails from './routes/property-details/PropertyDetails';
 
 render(
   <BrowserRouter>
     <Routes>
       <Route path="/properties" element={<App />}>
-        <Route path="/properties" element={<PropertyListing />} />
+        <Route path="/properties" element={<PropertyListing />}>
+          <Route path=":propertyId" element={<PropertyDetails />} />
+        </Route>
       </Route>
+      <Route path="*" element={<NoRouteMatch />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root'),
