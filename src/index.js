@@ -1,13 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './bootstrap';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import PropertyListing from './routes/property-listing/PropertyListing';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/properties" element={<App />}>
+        <Route path="/properties" element={<PropertyListing />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>,
   document.getElementById('root'),
 );
 

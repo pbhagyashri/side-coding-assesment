@@ -3,6 +3,8 @@
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  color: #2d2d2d;
+  font-weight: 600;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

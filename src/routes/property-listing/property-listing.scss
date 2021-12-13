@@ -1,0 +1,38 @@
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints';
+$grid-breakpoints: (
+  lg: 992px,
+  xxl: 1400px,
+);
+
+.property-listing-container {
+  margin-top: 4.5rem;
+
+  &__image {
+    min-height: 310px;
+
+    @include media-breakpoint-only(lg) {
+      min-height: 245px;
+    }
+    @include media-breakpoint-up(xxl) {
+      min-height: 350px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__list-item {
+    display: inline;
+    font-size: 20px;
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
