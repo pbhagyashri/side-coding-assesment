@@ -16,7 +16,11 @@ function App() {
           <Navbar varient="light" bg="light" fixed="top" className="navbar">
             <Container>
               <Navbar.Brand>
-                <Link to={'/properties'} className="header-link">
+                <Link
+                  to={'/properties'}
+                  className="header-link"
+                  data-testid="heading"
+                >
                   Property Listings
                 </Link>
               </Navbar.Brand>
