@@ -18,7 +18,6 @@ const PropertyListing = () => {
     xhr.setRequestHeader('Authorization', 'Basic c2ltcGx5cmV0czpzaW1wbHlyZXRz');
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
-        console.log(JSON.parse(xhr.responseText)[0]);
         setProperties(JSON.parse(xhr.responseText));
       }
     };
