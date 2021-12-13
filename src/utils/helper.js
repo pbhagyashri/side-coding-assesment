@@ -1,4 +1,4 @@
-function numOfbath(bathsfull, bathsHalf = 0) {
+function numOfBaths(bathsfull, bathsHalf = 0) {
   if (bathsHalf > 0) return bathsfull + 0.5;
 
   return bathsfull;
@@ -22,10 +22,7 @@ function formatPrice(price) {
 
 function formatListing(listing) {
   const dateObject = new Date(listing);
-  const month = dateObject.getMonth();
-  const year = dateObject.getFullYear();
-  const day = dateObject.getDate();
-  return `${month}/${day}/${year}`;
+  return `${dateObject.getMonth()}/${dateObject.getDate()}/${dateObject.getFullYear()}`;
 }
 
 function getFaoritedPropertiesFromStorage(key) {
@@ -58,7 +55,7 @@ function saveProperty(mlsId, key) {
 }
 
 module.exports = {
-  numOfbath,
+  numOfBaths,
   formatAddress,
   formatPrice,
   formatListing,
